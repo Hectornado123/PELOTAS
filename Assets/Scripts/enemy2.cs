@@ -1,27 +1,26 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class enemy : MonoBehaviour
+public class enemy2 : MonoBehaviour
 {
+    float velocidad = 2;
 
-     float velocidad =2;
-   
     void Update()
     {
 
 
-        if (transform.position.x>3.78f)
+        if (transform.position.z > 3.88f)
         {
 
             velocidad = -velocidad;
         }
 
-        if (transform.position.x < -1.78f)
+        if (transform.position.z < -2.78f)
         {
 
             velocidad = -velocidad;
         }
-        transform.Translate(velocidad*Time.deltaTime, 0, 0);
+        transform.Translate(0, 0, velocidad * Time.deltaTime);
     }
 
 
